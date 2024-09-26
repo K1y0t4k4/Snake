@@ -69,10 +69,10 @@ void text(void)
         system("cls");
         
         for (int i = 0; i < 3; i++) {
-            Pos(89, 25);
+            Pos(90, 25);
             printf("GAME OVER");
             Sleep(400);
-            Pos(89, 25);
+            Pos(90, 25);
             printf("         ");
             Sleep(400);
         }
