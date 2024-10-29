@@ -1,7 +1,7 @@
 <h1 align=center><b>Snake</b></h1>
 <div align=center>
     <img src="https://img.shields.io/badge/Github-lnznjn-yellow?style=plastic&logo=github">
-    <img src="https://img.shields.io/badge/C-yellow?style=plastic&logo=c" />
+    <img src="https://img.shields.io/badge/C-yellow?style=plastic&logo=c&logoColor=blue" />
 </div>
 
 </br>
