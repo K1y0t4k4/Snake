@@ -109,6 +109,18 @@ Node* snakeInit()
     node->x = initalX;
     node->y = initalY;
     node->next = NULL;
+    return node;
+}
+
+void snakeFree(Node* node)
+{
+    while (node->next)
+    {
+        Node* temp = node;
+        node = node->next;
+        free(temp);
+    }
+    free(node);
 }
 
 int getDirection()
@@ -160,7 +172,7 @@ void createFood()
     int y = rand() % (VerticalLength - 2) + 1;
     
     Node* temp = head;
-    while (temp->next != NULL) {
+    while (temp->next) {
         temp = temp->next;
         if (temp->x == x && temp->y == y) {
             createFood();
@@ -253,7 +265,6 @@ int main(void)
     text();
     box();
 
-    Node* temp = head;
     createFood();
     while (!(failed)) {
         if (_kbhit()) {
@@ -263,7 +274,8 @@ int main(void)
         Sleep(speed);
     }
     text();
-    
+
+    snakeFree(head);
     Pos(0, 52);
     printf("\n\n");
     return 0;
